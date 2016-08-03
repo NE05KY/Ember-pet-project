@@ -1,1 +1,19 @@
-<h2>Current page</h2>
+<p>{{model.date}}</p>
+
+<table class="mdl-data-table mdl-js-data-table">
+	<thead>
+	<tr>
+		<th class="mdl-data-table__cell--non-numeric">Currency</th>
+		<th>Rate</th>
+	</tr>
+	</thead>
+	<tbody>
+	{{#each-in model.rates as |rate currency|}}
+		<tr>
+			<td class="mdl-data-table__cell--non-numeric">{{rate}}</td>
+			<td>{{currency}}</td>
+		</tr>
+	{{/each-in}}
+
+	</tbody>
+</table>
