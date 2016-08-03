@@ -1,19 +1,30 @@
-<p>{{model.date}}</p>
+<div class="mdl-cell mdl-cell--12-col current-page">
+	<button {{action "update"}} class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent"
+	                            data-upgraded=",MaterialButton,MaterialRipple">
+		<i class="material-icons mdl-color-text--white" role="presentation">autorenew</i>
+		<span class="visuallyhidden">autorenew</span>
+		<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button>
 
-<table class="mdl-data-table mdl-js-data-table">
-	<thead>
-	<tr>
-		<th class="mdl-data-table__cell--non-numeric">Currency</th>
-		<th>Rate</th>
-	</tr>
-	</thead>
-	<tbody>
-	{{#each-in model.rates as |rate currency|}}
-		<tr>
-			<td class="mdl-data-table__cell--non-numeric">{{rate}}</td>
-			<td>{{currency}}</td>
-		</tr>
-	{{/each-in}}
+	{{#if currentlyLoading}}
+		<div class="mdl-spinner mdl-js-spinner is-active"></div>
+	{{/if}}
 
-	</tbody>
-</table>
+	{{#each model.chunkedRates as |chunk|}}
+		<table class="mdl-data-table mdl-js-data-table">
+			<thead>
+			<tr>
+				<th class="mdl-data-table__cell--non-numeric">Currency</th>
+				<th>Rate</th>
+			</tr>
+			</thead>
+			<tbody>
+			{{#each chunk as |rate|}}
+				<tr>
+					<td class="mdl-data-table__cell--non-numeric">{{rate.base}}</td>
+					<td>{{rate.currency}}</td>
+				</tr>
+			{{/each}}
+			</tbody>
+		</table>
+	{{/each}}
+</div>

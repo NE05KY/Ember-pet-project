@@ -10,7 +10,15 @@ export default DS.JSONAPISerializer.extend({
 				type: type.modelName,
 				attributes: {
 					date: payload.date,
-					rates: payload.rates
+					rates: (function () {
+						var array = [];
+
+						for (var item in payload.rates) {
+							array.push({base: item, currency: payload.rates[item]});
+						}
+
+						return array;
+					})()
 				}
 			}
 		}
