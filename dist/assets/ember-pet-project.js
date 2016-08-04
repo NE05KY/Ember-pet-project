@@ -8,7 +8,7 @@
 
 define('ember-pet-project/adapters/application', ['exports', 'ember-data'], function (exports, _emberData) {
 	exports['default'] = _emberData['default'].JSONAPIAdapter.extend({
-		host: 'http://api.fixer.io'
+		host: 'https://api.fixer.io'
 	});
 });
 define('ember-pet-project/adapters/current', ['exports', 'ember-pet-project/adapters/application'], function (exports, _emberPetProjectAdaptersApplication) {
@@ -1825,7 +1825,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("ember-pet-project/app")["default"].create({"name":"ember-pet-project","version":"0.0.0+4586d024"});
+  require("ember-pet-project/app")["default"].create({"name":"ember-pet-project","version":"0.0.0+6f016697"});
 }
 
 /* jshint ignore:end */
