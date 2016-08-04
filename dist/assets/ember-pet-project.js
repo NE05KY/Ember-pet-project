@@ -1825,7 +1825,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("emberPetProject/app")["default"].create({"name":"ember-pet-project","version":"0.0.0+01747e30"});
+  require("emberPetProject/app")["default"].create({"name":"ember-pet-project","version":"0.0.0+950e5c3a"});
 }
 
 /* jshint ignore:end */
