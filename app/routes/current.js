@@ -5,7 +5,7 @@ export default Ember.Route.extend({
 		return this.get('store').findRecord('current', 'USD');
 	},
 	actions: {
-		loading(transition, originRoute) {
+		loading(transition) {
 			let controller = this.controllerFor('current');
 			controller.set('currentlyLoading', true);
 			transition.promise.finally(function () {

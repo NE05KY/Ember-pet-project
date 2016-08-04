@@ -21,6 +21,6 @@ export default DS.JSONAPISerializer.extend({
 					})()
 				}
 			}
-		}
+		};
 	}
 });
