@@ -2,9 +2,9 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'emberPetProject',
+    modulePrefix: 'ember-pet-project',
     environment: environment,
-    rootURL: '/emberPetProject/dist/',
+    rootURL: '/ember-pet-project/dist/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {

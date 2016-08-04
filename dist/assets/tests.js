@@ -479,7 +479,7 @@ define('ember-pet-project/tests/unit/serializers/current-test.jshint', ['exports
 });
 /* jshint ignore:start */
 
-require('emberPetProject/tests/test-helper');
+require('ember-pet-project/tests/test-helper');
 EmberENV.TESTS_FILE_LOADED = true;
 
 /* jshint ignore:end */

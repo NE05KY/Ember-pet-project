@@ -1801,8 +1801,8 @@ define("ember-pet-project/templates/index", ["exports"], function (exports) {
 
 /* jshint ignore:start */
 
-define('emberPetProject/config/environment', ['ember'], function(Ember) {
-  var prefix = 'emberPetProject';
+define('ember-pet-project/config/environment', ['ember'], function(Ember) {
+  var prefix = 'ember-pet-project';
 /* jshint ignore:start */
 
 try {
@@ -1825,7 +1825,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("emberPetProject/app")["default"].create({"name":"ember-pet-project","version":"0.0.0+950e5c3a"});
+  require("ember-pet-project/app")["default"].create({"name":"ember-pet-project","version":"0.0.0+4586d024"});
 }
 
 /* jshint ignore:end */
